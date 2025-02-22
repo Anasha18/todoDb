@@ -1,4 +1,4 @@
-package org.example.util.secretManagerCred;
+package org.example.cred;
 
 public class SecretManager {
     public static String URL = System.getenv("URL");

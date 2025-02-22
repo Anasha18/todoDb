@@ -1,7 +1,7 @@
 package org.example.model.connection;
 
 import lombok.Getter;
-import org.example.util.secretManagerCred.SecretManager;
+import org.example.cred.SecretManager;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,8 +12,9 @@ public class DbConnection {
     private Connection connection;
 
     private DbConnection() throws SQLException {
-        connection = DriverManager.getConnection("jdbc:postgresql://83.147.246.87:5432/barkovskii_2323d_learning_db", "barkovskii_2323d_learning_user", "12345");
+    connection = DriverManager.getConnection(SecretManager.URL, SecretManager.USER, SecretManager.PASSWORD);
     }
+
 
     private static DbConnection instance = null;
 

@@ -69,8 +69,6 @@ public class Main {
 
                         List<TaskEntities> tasks = todoService.getAllTasks();
 
-                        List<Integer> taskId = tasks.stream().map(TaskEntities::getId).toList();
-
                         System.out.print("Введите id задачи для удаления: ");
                         int id = scanner.nextInt();
 
@@ -107,6 +105,7 @@ public class Main {
                 }
                 break;
                 case 5: {
+                    System.out.println("Приложение будет закрыто!");
                     System.exit(0);
                 }
             }
